@@ -27,6 +27,7 @@
     "office-ui-fabric-react": "^1.7.0",
     "radium": "^0.18.1",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "styled-components": "^1.4.3"
   }
 }
