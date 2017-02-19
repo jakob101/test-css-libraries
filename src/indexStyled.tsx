@@ -9,7 +9,7 @@ import { manageFocus } from './manageFocus';
 import { Theme } from './Theme';
 import { DetailsRow, Selection, SelectionMode } from 'office-ui-fabric-react/lib/DetailsList';
 //import { Button } from 'office-ui-fabric-react/lib/Button';
-import Button from './ButtonStyledBasic';
+import Button from './ButtonStyled';
 
 manageFocus(document.body);
 
@@ -19,7 +19,26 @@ document.body.appendChild(el);
 
 let content = (
   <div>
-    <Button>Hello world</Button>
+    <Button styles={{
+      base: `
+        background: ${Theme.yellow};
+        color: ${Theme.black};
+
+        &:hover: {
+          background: ${Theme.yellowLight};
+          color: ${Theme.black}
+        }
+      `,
+      toggled: `
+        background: ${Theme.green};
+        color: ${Theme.white};
+
+        &:hover: {
+          background: ${Theme.greenLight};
+          color: ${Theme.black}
+        }
+      `
+    }}>Hello world</Button>
     { makeButtons() }
   </div>
 );
